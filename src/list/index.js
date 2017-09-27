@@ -15,14 +15,14 @@ const boardContainerStyles = {
 }
 
 // Component Definition
-class Board extends Component {
+class List extends Component {
   // constructor(props) {
   //   super(props);
   // }
 
   render() {
     const title = (
-      <h3>BOARD</h3>
+      <h3>LIST</h3>
     );
     return (
       <div style={boardContainerStyles}>
@@ -31,7 +31,7 @@ class Board extends Component {
           header={title}
         >
           <ListGroup>
-            <ListGroupItem>Board is here</ListGroupItem>
+            <ListGroupItem>List is here</ListGroupItem>
           </ListGroup>
         </Panel>
       </div>
@@ -39,4 +39,4 @@ class Board extends Component {
   }
 }
 
-export default Board;
+export default List;
