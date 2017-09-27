@@ -16,10 +16,6 @@ const boardContainerStyles = {
 
 // Component Definition
 class Board extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   render() {
     const title = (
       <h3>BOARD</h3>

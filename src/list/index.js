@@ -14,11 +14,22 @@ const boardContainerStyles = {
   width: 500,
 }
 
+const listOfMuppets = [
+  { name: 'Animal' },
+  { name: 'Kermit' },
+  { name: 'Ms. Piggy' },
+  { name: 'Gonzo' },
+  { name: 'Fozzy' },
+  { name: '80s Robot' },
+]
+
 // Component Definition
 class List extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+  getListItems = () => {
+    return listOfMuppets.map(m =>
+      <ListGroupItem key={m.name}>{m.name}</ListGroupItem>
+    );
+  }
 
   render() {
     const title = (
@@ -31,7 +42,7 @@ class List extends Component {
           header={title}
         >
           <ListGroup>
-            <ListGroupItem>List is here</ListGroupItem>
+            {this.getListItems()}
           </ListGroup>
         </Panel>
       </div>

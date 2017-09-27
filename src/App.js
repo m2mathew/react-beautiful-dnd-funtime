@@ -9,6 +9,11 @@ import logo from './logo.svg';
 import './App.css';
 
 // Local Variables
+const headerStyles = {
+  display: 'flex',
+  justifyContent: 'space-around',
+};
+
 const dragDropContainerStyles = {
   display: 'flex',
 };
@@ -25,9 +30,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
+        <div
+          className="App-header"
+          style={headerStyles}
+        >
+          <h2>dnd fun time</h2>
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>'react-beautiful-dnd' === FUN TIME</h2>
         </div>
         <DragDropContext
           onDragStart={this.onDragStart}
