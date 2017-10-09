@@ -14,6 +14,10 @@ const boardContainerStyles = {
   width: 500,
 }
 
+const panelStyles = {
+  height: 500,
+};
+
 // Component Definition
 class Board extends Component {
   render() {
@@ -25,6 +29,7 @@ class Board extends Component {
         <Panel
           bsStyle="primary"
           header={title}
+          style={panelStyles}
         >
           <ListGroup>
             <ListGroupItem>Board is here</ListGroupItem>

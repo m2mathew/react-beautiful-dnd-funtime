@@ -9,10 +9,14 @@ import {
 // Internal Dependencies
 
 // Local Variables
-const boardContainerStyles = {
+const listContainerStyles = {
   margin: 32,
   width: 500,
 }
+
+const listItemStyles = {
+  marginTop: 8,
+};
 
 const listOfMuppets = [
   { name: 'Animal' },
@@ -27,7 +31,12 @@ const listOfMuppets = [
 class List extends Component {
   getListItems = () => {
     return listOfMuppets.map(m =>
-      <ListGroupItem key={m.name}>{m.name}</ListGroupItem>
+      <ListGroupItem
+        key={m.name}
+        style={listItemStyles}
+      >
+        {m.name}
+      </ListGroupItem>
     );
   }
 
@@ -36,7 +45,7 @@ class List extends Component {
       <h3>LIST</h3>
     );
     return (
-      <div style={boardContainerStyles}>
+      <div style={listContainerStyles}>
         <Panel
           bsStyle="primary"
           header={title}
